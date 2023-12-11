@@ -1,0 +1,92 @@
+[versions]
+# Plugins
+androidGradlePlugin = "8.1.4"
+kotlinGradlePlugin = "1.9.21"
+hiltGradlePlugin = "2.49"
+detektGradlePlugin = "1.23.4"
+googleServicePlugin = "4.3.15"
+crashlyticsPlugin = "2.9.4"
+ksp = "1.9.21-1.0.15"
+googleSecretsPlugin = "2.0.1"
+# Core
+androidxComposeBom = "2023.10.01"
+compose = "1.4.0"
+activityCompose = "1.8.1"
+
+coreKtx = "1.12.0"
+lifecycle = "2.6.2"
+retrofit = "2.9.0"
+okHttp = "4.12.0"
+coroutine = "1.7.3"
+gson = "2.10.1"
+hilt = "2.49"
+hiltCompose = "1.1.0"
+coil = "2.5.0"
+
+# Testing
+junit = "4.13.2"
+junitExt = "1.1.5"
+espressoCore = "3.5.1"
+
+[libraries]
+# Define the libraries
+# Lifecycle
+lifecycle_runtime_ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle_viewmodel_compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+lifecycle_runtime_compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+
+# Compose libraries
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+compose_ui = { group = "androidx.compose.ui", name = "ui" }
+compose_tooling_preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose_tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose_ui_test_manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+compose_material = { group = "androidx.compose.material", name = "material" }
+compose_icons = { group = "androidx.compose.material", name = "material-icons-extended" }
+compose_ui_test_junit = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+# Activity
+activity_compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+# Retrofit
+retrofit_core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit_gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okHttp" }
+# Moshi
+gson_core = { module = "com.google.code.gson:gson", version.ref = "gson" }
+# Coil
+coil_core = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+# Coroutines
+coroutine_core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
+coroutine_android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
+coroutine_test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
+# Hilt
+hilt_android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt_compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt_navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompose" }
+# Android core
+core_ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+# Test
+junit = { module = "junit:junit", version.ref = "junit" }
+# AndroidTest
+test_ext = { module = "androidx.test.ext:junit", version.ref = "junitExt" }
+test_espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+##Plugins
+dep-google-secrets-gradle-plugin = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "googleSecretsPlugin" }
+
+[bundles]
+# Define bundles/groups of libraries
+compose = ["compose.ui", "compose.material", "compose.tooling.preview", "compose.icons"]
+compose_debug = ["compose.tooling", "compose.ui.test.manifest"]
+coroutine = ["coroutine.core", "coroutine.android"]
+retrofit = ["retrofit.core", "retrofit.gson"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltGradlePlugin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detektGradlePlugin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServicePlugin" }
+crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPlugin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+google-secrets-gradle-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "googleSecretsPlugin" }
