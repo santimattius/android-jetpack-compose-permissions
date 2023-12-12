@@ -105,6 +105,8 @@ dependencies {
 
     implementation(libs.coil.core)
 
+    implementation(libs.accompanist.permissions)
+
     testImplementation(platform(libs.compose.bom))
     testImplementation(libs.junit)
 

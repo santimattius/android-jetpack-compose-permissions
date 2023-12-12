@@ -1,11 +1,11 @@
 [versions]
 # Plugins
-androidGradlePlugin = "8.1.4"
+androidGradlePlugin = "8.2.0"
 kotlinGradlePlugin = "1.9.21"
 hiltGradlePlugin = "2.49"
 detektGradlePlugin = "1.23.4"
-googleServicePlugin = "4.3.15"
-crashlyticsPlugin = "2.9.4"
+googleServicePlugin = "4.4.0"
+crashlyticsPlugin = "2.9.9"
 ksp = "1.9.21-1.0.15"
 googleSecretsPlugin = "2.0.1"
 # Core
@@ -22,6 +22,7 @@ gson = "2.10.1"
 hilt = "2.49"
 hiltCompose = "1.1.0"
 coil = "2.5.0"
+accompanistPermissions = "0.33.2-alpha"
 
 # Testing
 junit = "4.13.2"
@@ -31,6 +32,7 @@ espressoCore = "3.5.1"
 [libraries]
 # Define the libraries
 # Lifecycle
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
 lifecycle_runtime_ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 lifecycle_viewmodel_compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 lifecycle_runtime_compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
